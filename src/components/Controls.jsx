@@ -1,6 +1,8 @@
-export const Controls = () => {
-  <div>
-    <button>Prev</button>
-    <button>Next</button>
-  </div>;
+export const Controls = ({ handlePreviousClick }) => {
+  return (
+    <div>
+      <button onClick={() => handlePreviousClick()}>Prev</button>
+      <button>Next</button>
+    </div>
+  );
 };
