@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 export const MainContent = () => {
   const [apiData, setApiData] = useState([]);
+  const [imgId, setImgId] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,16 +14,20 @@ export const MainContent = () => {
       `
       );
       const data = await response.json();
-      console.log(data);
       setApiData(data);
     };
     fetchData();
   }, []);
 
+  const handleThumbnailClick = (imgId) => {
+    setImgId(imgId);
+    console.log(imgId);
+  };
+
   return (
     <main>
-      <MainImage />
-      <Thumbnails />
+      <MainImage imgId={imgId} apiData={apiData} />
+      <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
       <Controls />
     </main>
   );
