@@ -14,7 +14,9 @@ export const MainContent = () => {
       `
       );
       const data = await response.json();
+      console.log(data);
       setApiData(data);
+      setImgId(data[0].id);
     };
     fetchData();
   }, []);
