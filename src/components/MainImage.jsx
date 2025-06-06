@@ -7,11 +7,12 @@ export const MainImage = ({ imgId, apiData }) => {
     <section className="large-img-container">
       {imgObject ? (
         <img
+          // key={imgObject.id}
+          // src={imgObject.url}
+          // alt={imgObject.alt}
           key={imgObject.id}
-          src={imgObject.url}
-          alt={imgObject.alt}
-          // src={imgObject.urls.regular}
-          // alt={imgObject.alt_description}
+          src={imgObject.urls.regular}
+          alt={imgObject.alt_description}
         />
       ) : null}
     </section>

@@ -1,3 +1,7 @@
 export const Header = () => {
-  return <header>Image Gallery</header>;
+  return (
+    <header>
+      <h1 className="text-4xl p-4">Image Gallery</h1>
+    </header>
+  );
 };
