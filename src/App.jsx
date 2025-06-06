@@ -6,9 +6,9 @@ import { Footer } from "./components/Footer.jsx";
 export const App = () => {
   return (
     <div className="main-layout">
-      <Header />
+      {/* <Header /> */}
       <MainContent />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
