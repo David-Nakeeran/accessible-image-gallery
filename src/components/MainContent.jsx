@@ -56,9 +56,9 @@ export const MainContent = () => {
 
   return (
     <main className="flex flex-col justify-center items-center gap-2 w-screen">
+      <Search setSearch={setSearch} />
       <MainImage imgId={imgId} apiData={apiData} />
       <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
-      <Search setSearch={setSearch} />
       <Controls
         handlePreviousClick={handlePreviousClick}
         handleNextClick={handleNextClick}

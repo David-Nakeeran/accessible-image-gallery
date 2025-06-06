@@ -20,6 +20,11 @@ body {
   min-height: 100dvh;
 }
 
+main {
+  height: 100%;
+  width: 100%;
+}
+
 .large-img-container {
   width: 80%;
   border: 2px solid #b388ff;
@@ -29,7 +34,7 @@ body {
 .large-img-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
 }
 
@@ -43,7 +48,7 @@ body {
 }
 
 .thumbnail-container img {
-  width: 100px;
+  width: 50px;
 }
 
 .control-width {
