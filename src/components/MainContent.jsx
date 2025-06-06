@@ -39,11 +39,28 @@ export const MainContent = () => {
     setImgId(apiData[index - 1].id);
   };
 
+  const handleNextClick = () => {
+    const index = apiData.findIndex((element) => {
+      return element.id === imgId;
+    });
+    const lastIndexOfArr = apiData.length - 1;
+
+    if (index === lastIndexOfArr) {
+      setImgId(apiData[0].id);
+      return;
+    }
+
+    setImgId(apiData[index + 1].id);
+  };
+
   return (
     <main>
       <MainImage imgId={imgId} apiData={apiData} />
       <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
-      <Controls handlePreviousClick={handlePreviousClick} />
+      <Controls
+        handlePreviousClick={handlePreviousClick}
+        handleNextClick={handleNextClick}
+      />
     </main>
   );
 };
