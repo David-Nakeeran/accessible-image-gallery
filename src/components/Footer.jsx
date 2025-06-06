@@ -1,3 +1,3 @@
 export const Footer = () => {
-  return <footer>Image Gallery Copyright©</footer>;
+  return <footer className="bg-[#2a2a3c]">Image Gallery Copyright©</footer>;
 };

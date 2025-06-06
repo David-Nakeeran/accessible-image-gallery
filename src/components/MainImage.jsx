@@ -4,12 +4,14 @@ export const MainImage = ({ imgId, apiData }) => {
   });
 
   return (
-    <section>
+    <section className="large-img-container">
       {imgObject ? (
         <img
           key={imgObject.id}
-          src={imgObject.urls.regular}
-          alt={imgObject.alt_description}
+          src={imgObject.url}
+          alt={imgObject.alt}
+          // src={imgObject.urls.regular}
+          // alt={imgObject.alt_description}
         />
       ) : null}
     </section>
