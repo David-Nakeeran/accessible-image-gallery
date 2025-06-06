@@ -5,10 +5,10 @@ import { Footer } from "./components/Footer.jsx";
 
 export const App = () => {
   return (
-    <>
+    <div className="main-layout">
       <Header />
       <MainContent />
       <Footer />
-    </>
+    </div>
   );
 };

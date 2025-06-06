@@ -54,7 +54,7 @@ export const MainContent = () => {
   };
 
   return (
-    <main>
+    <main className="flex flex-col justify-center items-center gap-2 w-screen">
       <MainImage imgId={imgId} apiData={apiData} />
       <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
       <Controls
