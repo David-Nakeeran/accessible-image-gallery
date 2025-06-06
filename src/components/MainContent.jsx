@@ -1,17 +1,18 @@
 import { MainImage } from "./MainImage.jsx";
 import { Thumbnails } from "./Thumbnails.jsx";
 import { Controls } from "./Controls.jsx";
+import { Search } from "./Search.jsx";
 import { useState, useEffect } from "react";
 
 export const MainContent = () => {
   const [apiData, setApiData] = useState([]);
   const [imgId, setImgId] = useState("");
-
+  const [search, setSearch] = useState("");
+  console.log(search);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}
-      `
+        `${import.meta.env.VITE_API_URL}&query=${search}`
       );
       const data = await response.json();
       console.log(data);
@@ -19,7 +20,7 @@ export const MainContent = () => {
       setImgId(data[0].id);
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   const handleThumbnailClick = (imgId) => {
     setImgId(imgId);
@@ -57,6 +58,7 @@ export const MainContent = () => {
     <main className="flex flex-col justify-center items-center gap-2 w-screen">
       <MainImage imgId={imgId} apiData={apiData} />
       <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
+      <Search setSearch={setSearch} />
       <Controls
         handlePreviousClick={handlePreviousClick}
         handleNextClick={handleNextClick}
