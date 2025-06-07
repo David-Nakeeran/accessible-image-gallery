@@ -4,12 +4,14 @@ export const Controls = ({ handlePreviousClick, handleNextClick }) => {
       <button
         className="font-medium cursor-pointer"
         onClick={() => handlePreviousClick()}
+        aria-label="Previous image"
       >
         <i className="fa-regular fa-square-caret-left text-3xl text-purple-400 hover:text-purple-500 drop-shadow-xl md:text-5xl"></i>
       </button>
       <button
         className="font-medium cursor-pointer"
         onClick={() => handleNextClick()}
+        aria-label="Next image"
       >
         <i className="fa-regular fa-square-caret-right text-3xl text-purple-400 hover:text-purple-500 drop-shadow-xl md:text-5xl"></i>
       </button>
