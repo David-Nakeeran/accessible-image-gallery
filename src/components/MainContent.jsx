@@ -8,7 +8,7 @@ export const MainContent = () => {
   const [apiData, setApiData] = useState([]);
   const [imgId, setImgId] = useState("");
   const [search, setSearch] = useState("");
-  console.log(search);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(

@@ -2,9 +2,7 @@ export const Thumbnails = ({ apiData, handleClick }) => {
   const imgElements = apiData.map((element) => {
     return (
       <img
-        // key={element.id}
-        // src={element.url}
-        // alt={element.alt}
+        className="w-[30%]"
         key={element.id}
         src={element.urls.thumb}
         alt={element.alt_description}
@@ -12,5 +10,9 @@ export const Thumbnails = ({ apiData, handleClick }) => {
       />
     );
   });
-  return <section className="thumbnail-container">{imgElements}</section>;
+  return (
+    <section className="thumbnail-container flex w-[50%] overflow-x-scroll gap-3 bg-[#00000098] mb-3">
+      {imgElements}
+    </section>
+  );
 };
