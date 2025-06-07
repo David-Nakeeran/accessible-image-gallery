@@ -8,6 +8,7 @@ export const MainContent = () => {
   const [apiData, setApiData] = useState([]);
   const [imgId, setImgId] = useState("");
   const [search, setSearch] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,11 +55,20 @@ export const MainContent = () => {
     setImgId(apiData[index + 1].id);
   };
 
+  const handleVisibilityClick = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
     <main>
       <Search setSearch={setSearch} />
       <MainImage imgId={imgId} apiData={apiData} />
-      <Thumbnails apiData={apiData} handleClick={handleThumbnailClick} />
+      <Thumbnails
+        apiData={apiData}
+        handleClick={handleThumbnailClick}
+        handleVisibilityClick={handleVisibilityClick}
+        isVisible={isVisible}
+      />
       <Controls
         handlePreviousClick={handlePreviousClick}
         handleNextClick={handleNextClick}
