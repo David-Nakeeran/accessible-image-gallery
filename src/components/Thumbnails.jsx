@@ -14,7 +14,7 @@ export const Thumbnails = ({ apiData, handleClick }) => {
     );
   });
   return (
-    <section className="thumbnail-container flex w-[50%] overflow-x-scroll gap-3 bg-[#00000098] mb-3">
+    <section className="thumbnail-container flex w-[50%] overflow-x-scroll gap-3 bg-[#00000098] mb-3 md:w-[30%] md:mt-3 lg:w-[20%]">
       {imgElements}
     </section>
   );
