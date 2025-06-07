@@ -36,6 +36,12 @@ main {
   border-radius: 6px;
 }
 
+.thumbnail-button {
+  grid-area: 3 / 1 / 4 / 2;
+  align-self: end;
+  z-index: 1;
+}
+
 .search {
   grid-area: 1 / 1 / 2 / 2;
   z-index: 1;
@@ -50,7 +56,13 @@ main {
 @media (min-width: 768px) {
   .thumbnail-container {
     grid-area: 1 / 1 / 2 / 2;
+    align-self: end;
+  }
+
+  .thumbnail-button {
+    grid-area: 1 / 1 / 2 / 2;
     align-self: start;
+    z-index: 1;
   }
 
   .search {
