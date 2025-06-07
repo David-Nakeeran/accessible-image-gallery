@@ -12,13 +12,18 @@ export const MainContent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}&query=${search}`
-      );
-      const data = await response.json();
-      console.log(data);
-      setApiData(data);
-      setImgId(data[0].id);
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}&query=${search}`
+        );
+        const data = await response.json();
+        if (!data.errors) {
+          setApiData(data);
+          setImgId(data[0].id);
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
     };
     fetchData();
   }, [search]);
