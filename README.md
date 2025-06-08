@@ -53,6 +53,8 @@ npm run dev
 
 - I had a bug where if the API returned no data the whole app would crash. So I added error handling to fetch to resolve this
 
+- I would like feedback in regards to my thumbnail container, the approach I took in terms of responsiveness isn't the best approach I think
+
 ## Technologies Used
 
 - React
