@@ -10,6 +10,7 @@ export const MainImage = ({ imgId, apiData }) => {
           key={imgObject.id}
           src={imgObject.urls.regular}
           alt={imgObject.alt_description}
+          aria-live="polite"
         />
       ) : null}
     </section>
